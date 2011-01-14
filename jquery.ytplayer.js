@@ -25,15 +25,15 @@
              repeat : false,
              width : 640,
              height : 360,
-             hoverControls : true,
+             hoverControls : false,
              swfobjectUniqueId : 'ytplayer-' + Math.round(Math.random()*1000),
              flashVersion : 10,
              params : '',
              playbackQuality : 'medium',
              ytkey : 'AI39si7ibKKE9Vsdjd_jf1hM3SFrX9tv9PrEf8fcAGoUf0JK2DJASs3PdYqezizSBnE-hnWnGP7POHR6AMQ8gxSxxjwnxietdA',
-             showControls : true,
+             showControls : false,
              controlsContainer : '#ytplayer-controls',
-             showSlider : true,
+             showSlider : false,
              sliderContainer : '#ytplayer-slider',
              sliderOrientation : 'horizontal',
              sliderRangeClass : 'ui-state-error',
@@ -60,13 +60,13 @@
              jQueryUITheme : 'base',
              jQueryUIThemePath : 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/{theme-name}/jquery-ui.css',
              myClass : '',
-             showCategories : true,
+             showCategories : false,
              categoriesContainer : '#ytplayer-categories',
-             showPlaylist : true,
+             showPlaylist : false,
              playlistContainer : '#ytplayer-playlist',
-             showCurrentTitle : true,
+             showCurrentTitle : false,
              currentTitleContainer : '#ytplayer-current-title',
-             showCurrentDescription : true,
+             showCurrentDescription : false,
              currentDescriptionContainer : '#ytplayer-current-description',
              debug : false   
 			}
@@ -86,6 +86,7 @@
             } 
              
             if(o.loadjQueryUI) $('head').append('<script src="' + o.jQueryUI + '" type="text/javascript" rel="ytplayer"></script>\n');
+            
             if(o.stylesheet) $('head').append('<link class="ytplayer-stylesheet" rel="stylesheet" href="' + o.stylesheet + '" type="text/css" media="all" />');
             
             if(o.myClass) $(this).addClass(o.myClass);
