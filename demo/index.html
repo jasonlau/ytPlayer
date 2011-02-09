@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+<!--
+/* 
+    ytPlayer Demo
+    ==================================================================
+    ©2010-2011 ytPlayer.com JasonLau.biz - Version dev beta
+    ==================================================================
+    jQuery.ytPlayer Plugin by JasonLau.biz is licensed under a
+    Creative Commons Attribution-ShareAlike 3.0 Unported License.
+    You can review said license at 
+    http://creativecommons.org/licenses/by-sa/3.0/
+    Based on a work at ytPlayer.com.
+    Permissions beyond the scope of this license may be requested at
+    http://JasonLau.biz.    
+*/
+-->
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<meta name="author" content="JasonLau.biz ytPlayer.com">
+
+	<title>ytPlayer.com Demo</title>
+    
+    <script type="text/javascript" src="demo_files/jquery-latest.js" rel="ytplayer"></script>
+<script type="text/javascript" src="demo_files/jquery_004.js" rel="ytplayer"></script>
+<script type="text/javascript" src="demo_files/jquery_002.js" rel="ytplayer"></script>
+<script type="text/javascript" src="demo_files/jquery_003.js" rel="ytplayer"></script>
+<script type="text/javascript" src="demo_files/jquery.ytplayer.js" rel="ytplayer"></script>
+<script type="text/javascript">
+
+jQuery(function(){
+jQuery("#my-ytplayer").ytplayer({
+player : 'demo_files/ytplayer.swf',
+id : 'ytplayer',
+build : '',
+playlist : 'category{title{Test Category 1}info{This is a test of category 1.}video{JbWN1CPiCnk|Test Item 1|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula, libero nec bibendum tempor, nibh eros aliquam ligula, luctus ultricies mauris sapien eleifend mauris. Nulla sit amet nulla a quam laoreet faucibus. Fusce pulvinar molestie dui quis venenatis. Phasellus aliquet consequat varius.}video{JbWN1CPiCnk|Test Item 2|Ut id nisi sed quam semper sagittis. Quisque vitae tellus eget turpis consequat mollis. Vivamus at metus vitae sapien molestie volutpat id sed lectus. Mauris faucibus pharetra erat vitae aliquet. Nam consectetur dolor vel justo fermentum nec dapibus est pulvinar. Duis tempus eros vel lacus elementum congue.}}category{title{Test Category 2}info{This is a test of category 2.}video{JbWN1CPiCnk|Test Item 3|Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquam, nibh eu euismod luctus, erat quam ullamcorper libero, quis malesuada arcu lectus volutpat sapien.}video{JbWN1CPiCnk|Test Item 4|Donec vitae nulla diam. Donec metus lectus, faucibus sit amet egestas nec, lobortis vitae tellus. Duis suscipit, odio a mollis ultrices, dolor velit elementum ipsum, id suscipit sem orci at mi.}video{JbWN1CPiCnk|Test Item 5|Maecenas dignissim, felis ut pellentesque facilisis, orci urna faucibus velit, at sollicitudin augue tortor id orci. Vivamus blandit, diam nec placerat luctus, leo arcu dapibus arcu, vel rhoncus dui magna quis nibh.}}',
+autoplay : true,
+shuffle : false,
+repeat : false,
+width : 640,
+height : 360,
+hoverControls : false,
+swfobjectUniqueId : 'ytplayer-' + Math.round(Math.random()*1000),
+flashVersion : 10,
+params : '',
+playbackQuality : 'medium',
+ytkey : 'AI39si7ibKKE9Vsdjd_jf1hM3SFrX9tv9PrEf8fcAGoUf0JK2DJASs3PdYqezizSBnE-hnWnGP7POHR6AMQ8gxSxxjwnxietdA',
+showControls : true,
+controlsContainer : '#ytplayer-controls',
+showSlider : true,
+sliderContainer : '#ytplayer-slider',
+sliderOrientation : 'horizontal',
+sliderRangeClass : 'ui-state-highlight',
+playPauseButton : true,
+playPauseButtonLabel : ' Play ',
+playButton : false,
+playButtonLabel : ' Play ',
+pauseButton : false,
+pauseButtonLabel : ' Pause ',
+pausedButtonLabel : ' Paused ',
+stopButton : true,
+stopButtonLabel : ' Stop ',
+stoppedButtonLabel : ' Stopped ',
+skipButton : true,
+skipButtonLabel : ' >> ',
+backButton : true,
+backButtonLabel : ' << ',
+muteButton : true,
+muteButtonLabel : ' Mute ',
+mutedButtonLabel : ' Muted ',
+stylesheet : '',
+loadjQueryUI : true,
+jQueryUI : 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js',
+jQueryUITheme : 'base',
+jQueryUIThemePath : 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/{theme-name}/jquery-ui.css',
+myClass : '',
+showCategories : true,
+categoriesContainer : '#ytplayer-categories',
+showPlaylist : true,
+playlistContainer : '#ytplayer-playlist',
+showCurrentTitle : true,
+currentTitleContainer : '#ytplayer-current-title',
+showCurrentDescription : true,
+currentDescriptionContainer : '#ytplayer-current-description',
+debug : false
+});
+});
+
+</script>
+
+</head>
+
+<body>
+<table border="0" width="900px" class="ui-widget-content">
+<tr>
+	<td valign="top">
+    <table cellspacing="4px" cellpadding="4px">
+<tr>
+	<td id="my-ytplayer" width="640px" align="center"></td>
+</tr>
+<tr>
+	<td><div id="ytplayer-slider"></div></td>
+</tr>
+<tr>
+	<td><div id="ytplayer-controls"></div></td>
+</tr>
+</table>
+</td>
+<td valign="top">
+<table>
+<tr>
+	<td valign="top">
+    <h2>Categories</h2>
+    <span id="ytplayer-categories"></span>
+    </td>
+</tr>
+<tr>
+	<td valign="top">
+    <h2>Playlist</h2>
+    <span id="ytplayer-playlist"></span>
+    </td>
+</tr>
+<tr>
+	<td id="ytplayer-current-item" valign="top">
+    <h2 id="ytplayer-current-title"></h2>
+    <p id="ytplayer-current-description"></p>
+    </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div id="debug"></div>
+&copy;2011 <a href="http://ytPlayer.com" target="_blank">ytPlayer.com</a> <a href="http://WebXecutive.com" target="_blank">WebXecutive.com</a>	
+</body>
+</html>
