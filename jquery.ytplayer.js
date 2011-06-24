@@ -2,7 +2,7 @@
 /* 
     ytPlayer - A jQuery plugin
     ==================================================================
-    ©2010-2011 ytPlayer.com JasonLau.biz - Version dev beta
+    ©2010-2011 ytPlayer.com JasonLau.biz - Version 1.0.0
     ==================================================================
     jQuery.ytPlayer Plugin by JasonLau.biz is licensed under a
     Creative Commons Attribution-ShareAlike 3.0 Unported License.
@@ -288,7 +288,7 @@
                         if(o.showSlider){                        
                         $(o.sliderContainer).slider('option', 'value', pper);
                         } 
-                       $(o.controlsContainer + " input").attr('disabled',''); 
+                       $(o.controlsContainer + " input").prop('disabled',false); 
                                                                                            
                        if(currentState == 1 && o.playPauseButton) $(o.controlsContainer + " .ytplayer-play-pause-button").val(o.pauseButtonLabel);
                        if(currentState == 1 && o.pauseButton) $(o.controlsContainer + " .ytplayer-pause-button").val(o.pauseButtonLabel);
